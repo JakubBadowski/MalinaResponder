@@ -25,6 +25,8 @@ echo getTemperature > orders.txt
 Mając na Malinie treść rozkazu, możemy dostosować odpowiedź i przesłać ją do serwera metodą POST.
 
 ## Jak to działa?
-Plik klient.php ...
+Zajebiście :)
+Plik klient.php (Malina) zawiera pętlę nieskończoną z domyślnym interwałem czasowym 1s. Co sekundę odpytuje serwer czy nie ma dla niej jakiegoś rozkazu. Jeśli jest, treść rozkazu zostaje natychmiast przesłana do Maliny w formacie JSON. To klient (Malina) inicjuje cały ruch HTTP, mając dostęp do Internetu jak zwykła przeglądarka WWW. Firewall-e mu nie straszne! Rozkazy od serwera dostaje w formie odpowiedzi na swoje zapytania. Za to mając już odpowiedź na zewnętrznym serwerze, możemy nią zrobić WSZYSTKO!
 
-##
+## UWAGA!
+Prezentowany kod jest tylko przykładem zorganizowania komunikacji Malina -> Świat/ Świat -> Malina. Nie ma w nim mechanizmów bezpieczeństwa i nie polecam stosować go poza siecią lokalną.
